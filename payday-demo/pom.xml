@@ -27,100 +27,121 @@
     </repository>
 </repositories>
 
+ <!-- Spring Cloud dependencies -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Hoxton.SR1</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
+<!--         <dependency> -->
+<!--             <groupId>org.springframework.boot</groupId> -->
+<!--             <artifactId>spring-boot-starter-data-jpa</artifactId> -->
+<!--         </dependency> -->
+<!--         <dependency> -->
+<!--             <groupId>org.springframework.boot</groupId> -->
+<!--             <artifactId>spring-boot-starter-security</artifactId> -->
+<!--         </dependency> -->
+<!--         <dependency> -->
+<!--             <groupId>org.springframework.boot</groupId> -->
+<!--             <artifactId>spring-boot-starter-web</artifactId> -->
+<!--         </dependency> -->
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-aop</artifactId>
-        </dependency>
+<!--         <dependency> -->
+<!--             <groupId>org.springframework.boot</groupId> -->
+<!--             <artifactId>spring-boot-starter-aop</artifactId> -->
+<!--         </dependency> -->
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-hateoas</artifactId>
-        </dependency>
+<!--         <dependency> -->
+<!--             <groupId>org.springframework.boot</groupId> -->
+<!--             <artifactId>spring-boot-starter-hateoas</artifactId> -->
+<!--         </dependency> -->
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-rest</artifactId>
-        </dependency>
+<!--         <dependency> -->
+<!--             <groupId>org.springframework.boot</groupId> -->
+<!--             <artifactId>spring-boot-starter-data-rest</artifactId> -->
+<!--         </dependency>         -->
+		    
+<!--         <dependency> -->
+<!--             <groupId>io.jsonwebtoken</groupId> -->
+<!--             <artifactId>jjwt</artifactId> -->
+<!--             <version>0.8.0</version> -->
+<!--         </dependency> -->
 
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt</artifactId>
-            <version>0.8.0</version>
-        </dependency>
-
-		<dependency>
-			<groupId>com.oracle.ojdbc</groupId>
-			<artifactId>ojdbc8</artifactId>
-			<scope>runtime</scope>
-		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.oracle.ojdbc</groupId> -->
+<!-- 			<artifactId>ojdbc8</artifactId> -->
+<!-- 			<scope>runtime</scope> -->
+<!-- 		</dependency> -->
 		
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-        </dependency>
+<!--         <dependency> -->
+<!--             <groupId>org.postgresql</groupId> -->
+<!--             <artifactId>postgresql</artifactId> -->
+<!--         </dependency> -->
 
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.rest-assured</groupId>
-            <artifactId>rest-assured</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.rest-assured</groupId>
-            <artifactId>json-path</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-test</artifactId>
-            <scope>test</scope>
-        </dependency>
+<!--         <dependency> -->
+<!--             <groupId>org.projectlombok</groupId> -->
+<!--             <artifactId>lombok</artifactId> -->
+<!--             <optional>true</optional> -->
+<!--         </dependency> -->
+<!--         <dependency> -->
+<!--             <groupId>org.springframework.boot</groupId> -->
+<!--             <artifactId>spring-boot-starter-test</artifactId> -->
+<!--             <scope>test</scope> -->
+<!--         </dependency> -->
+<!--         <dependency> -->
+<!--             <groupId>com.h2database</groupId> -->
+<!--             <artifactId>h2</artifactId> -->
+<!--             <scope>test</scope> -->
+<!--         </dependency> -->
+<!--         <dependency> -->
+<!--             <groupId>io.rest-assured</groupId> -->
+<!--             <artifactId>rest-assured</artifactId> -->
+<!--             <scope>test</scope> -->
+<!--         </dependency> -->
+<!--         <dependency> -->
+<!--             <groupId>io.rest-assured</groupId> -->
+<!--             <artifactId>json-path</artifactId> -->
+<!--             <scope>test</scope> -->
+<!--         </dependency> -->
+      
+<!--         <dependency> -->
+<!--             <groupId>org.springframework.security</groupId> -->
+<!--             <artifactId>spring-security-test</artifactId> -->
+<!--             <scope>test</scope> -->
+<!--         </dependency> -->
         
-		 <dependency>
-		    <groupId>io.springfox</groupId>
-		    <artifactId>springfox-swagger2</artifactId>
-		    <version>3.0.0-SNAPSHOT</version>
-		</dependency>
+<!-- 		 <dependency> -->
+<!-- 		    <groupId>io.springfox</groupId> -->
+<!-- 		    <artifactId>springfox-swagger2</artifactId> -->
+<!-- 		    <version>3.0.0-SNAPSHOT</version> -->
+<!-- 		</dependency> -->
 		
-		<dependency>
-		    <groupId>io.springfox</groupId>
-		    <artifactId>springfox-data-rest</artifactId>
-		    <version>3.0.0-SNAPSHOT</version>
-		</dependency>
+<!-- 		<dependency> -->
+<!-- 		    <groupId>io.springfox</groupId> -->
+<!-- 		    <artifactId>springfox-data-rest</artifactId> -->
+<!-- 		    <version>3.0.0-SNAPSHOT</version> -->
+<!-- 		</dependency> -->
 		
-		<dependency>
-		    <groupId>io.springfox</groupId>
-		    <artifactId>springfox-swagger-ui</artifactId>
-		    <version>2.9.2</version>
-		</dependency>
+<!-- 		<dependency> -->
+<!-- 		    <groupId>io.springfox</groupId> -->
+<!-- 		    <artifactId>springfox-swagger-ui</artifactId> -->
+<!-- 		    <version>2.9.2</version> -->
+<!-- 		</dependency> -->
+        
+<!--          <dependency> -->
+<!--             In-memory database for testing/demos -->
+<!--             <groupId>org.hsqldb</groupId> -->
+<!--             <artifactId>hsqldb</artifactId> -->
+<!--         </dependency> -->
+        
         
     </dependencies>
 
@@ -134,9 +155,11 @@
     </build>
   
   <modules>
-  	<module>authentication-service</module>
+  	<module>apigateway</module>
   	<module>accounts-service</module>
   	<module>transactions-service</module>
   	<module>notifications-service</module>
+  	<module>customers-service</module>
+  	<module>eureka</module>
   </modules>
 </project>
