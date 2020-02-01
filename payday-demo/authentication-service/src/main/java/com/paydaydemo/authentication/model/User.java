@@ -19,16 +19,20 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 @Entity
-@Table(name="OC_SYS.PDAY_USERS")
+@Table(name = "PDAY_USERS", schema = "PD")
 public class User implements UserDetails, Serializable{
 
 	private static final long serialVersionUID = 1L;
 
 	@Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_USER_ID")
-    @SequenceGenerator(sequenceName = "OC_SYS.SQ_PDAYUSER_ID", allocationSize = 1, name = "SQ_USER_ID")
+    @SequenceGenerator(sequenceName = "SQ_PDAYUSER_ID", schema = "PD", allocationSize = 1, name = "SQ_USER_ID")
     Long id;
 	
+	public User() {
+		super();
+	}
+
 	@Column(name = "USERNAME")
 	String userName;
 
@@ -133,7 +137,7 @@ public class User implements UserDetails, Serializable{
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		
-		return Arrays.stream(this.roles.split(";")).map(SimpleGrantedAuthority::new).collect(Collectors.toList());
+		return  Arrays.stream(this.roles.split(";")).map(SimpleGrantedAuthority::new).collect(Collectors.toList());
 	}
 
 	@Override
