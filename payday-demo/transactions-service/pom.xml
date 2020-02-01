@@ -8,4 +8,13 @@
   <artifactId>transactions-service</artifactId>
   <name>transactions-service</name>
   <description>PayDay Transactions Service</description>
+  
+  <dependencies>
+		<dependency>
+			<groupId>com.paydaydemo</groupId>
+			<artifactId>authentication-service</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+ </dependencies>
+	
 </project>

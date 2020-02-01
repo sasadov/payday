@@ -2,6 +2,7 @@ package com.paydaydemo.authentication;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -13,7 +14,7 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
 
-@SpringBootApplication
+@SpringBootApplication(exclude = RepositoryRestMvcAutoConfiguration.class)
 @ComponentScan(basePackages = { "com.paydaydemo.authentication.controller", "com.paydaydemo.authentication.repository", "com.paydaydemo.authentication.service" , "com.paydaydemo.security"})
 @EntityScan("com.paydaydemo.authentication.model")
 @EnableJpaRepositories("com.paydaydemo.authentication.repository")

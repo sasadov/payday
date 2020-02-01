@@ -39,9 +39,6 @@ public class AuthenticationController {
 	
     private UserService userService;
 
-   // @Autowired
-    AuthenticationManager authenticationManager;
-
     @Autowired
     JwtUtility jwtUtility;
 
@@ -59,7 +56,7 @@ public class AuthenticationController {
         		     PasswordEncoderFactories.createDelegatingPasswordEncoder();           
          	String encoded = encoder.encode(request.user.getPassword());
         	request.user.setPassword(encoded);  
-        	userService.CreateUser(request.user);
+        	userService.createUser(request.user);
             return new ResponseEntity<User>(request.user, HttpStatus.CREATED);
         } catch (Exception e) {
             throw new SignUpFailedException();

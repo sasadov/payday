@@ -1,4 +1,4 @@
-package com.paydaydemo.accounts.controller;
+package com.paydaydemo.accounts.service;
 
 public enum AccountType {
 

@@ -9,5 +9,5 @@ public interface UserService {
 	
 	public User getUserByUserName(String userName) throws UserNotFoundException;
 	public Optional<User> findUserByUserName(String userName);
-	public User CreateUser(User user);
+	public User createUser(User user);
 }
