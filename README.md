@@ -7,7 +7,7 @@ Solution covers sample use cases of conceptual digital banking backend system. M
 customer authentication, customer authorisation, account opening, getting account summary, getting transactions and getting email notifications for account opening events. 
 
 ## Architecture
-Project architected using Microservices pattern -[https://microservices.io/patterns/index.html](https://microservices.io/patterns/index.html).
+Project architected using Microservices pattern [https://microservices.io/patterns/index.html](https://microservices.io/patterns/index.html).
 API Gateway, Microservices, Service Discovery, Circuit Breaker and Load Balancer are main architectural patterns which have been applied. 
 Entry point to the system is the API Gateway. API Gateway is responsible for authentication and authorisation of customers and forwarding 
 customer requests to related microservices. Microservices are registered Service Discovery automatically as service starts. 
