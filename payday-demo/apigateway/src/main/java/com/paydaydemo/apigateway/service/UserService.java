@@ -10,4 +10,6 @@ public interface UserService {
 	public User getUserByUserName(String userName) throws UserNotFoundException;
 	public Optional<User> findUserByUserName(String userName);
 	public User createUser(User user);
+	public Optional<User> getUserById(Long id);
+	public void updateUser(User user);
 }

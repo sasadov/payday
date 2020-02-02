@@ -28,7 +28,7 @@ public class AccountServiceImpl implements AccountsService {
 		account.setAccountType(accountDto.accountType.toString());
 		account.setBalance(new BigDecimal(0));
 		account.setDate(new Date());
-		account.setCustomerId(accountDto.CustomerId);
+		account.setCustomerId(accountDto.customerId);
 		account.setIsActive(true);
 		account.setAccountNumber("1234567890");
 		accountRepository.save(account);

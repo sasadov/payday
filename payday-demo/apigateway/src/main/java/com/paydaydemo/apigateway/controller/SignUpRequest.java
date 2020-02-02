@@ -1,8 +1,7 @@
 package com.paydaydemo.apigateway.controller;
-
-import com.paydaydemo.apigateway.model.User;
+import com.paydaydemo.apigateway.service.UserDto;
 
 public class SignUpRequest {
 
-	public User user;
+	public UserDto user;
 }

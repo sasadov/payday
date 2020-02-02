@@ -44,7 +44,7 @@ public class JwtAuthenticationProvider implements AuthenticationProvider{
 			String roles = jwtUtility.getRoles(jwtAuthentication.getJwtToken());
 			Collection<? extends GrantedAuthority> authorities=  Arrays.stream(roles.split(";")).map(SimpleGrantedAuthority::new).collect(Collectors.toList());
 			jwtAuthentication.setAuthorities(authorities);
-			jwtAuthentication.setAuthenticated(true);
+			jwtAuthentication.setUsername(username);
 		}
 		else {
 			jwtAuthentication.setAuthenticated(false);

@@ -20,10 +20,8 @@ public class UserServiceImpl implements UserService {
     }
 
 	@Override
-	public User createUser(User user) {
-		
-		userRepository.save(user);
-		return user;
+	public User createUser(User user) {		
+		return userRepository.save(user);
 	}
 
 	@Override
@@ -35,7 +33,16 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public Optional<User> findUserByUserName(String userName) {
-
 		return userRepository.findUserByUserName(userName);
+	}
+
+	@Override
+	public Optional<User> getUserById(Long id) {
+		return userRepository.findById(id);
+	}
+
+	@Override
+	public void updateUser(User user) {
+		userRepository.save(user);
 	}
 }

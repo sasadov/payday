@@ -7,10 +7,12 @@ import org.springframework.security.core.GrantedAuthority;
 
 public class JwtAuthentication implements Authentication{
 
+	private static final long serialVersionUID = 1L;
 	private String jwtToken;
 	private boolean isAuthenticated;
 	private String username;
 	private String password;
+	
 	private Collection<? extends GrantedAuthority> authorities;
 	
 	public void setAuthorities(Collection<? extends GrantedAuthority> authorities) {
@@ -56,6 +58,14 @@ public class JwtAuthentication implements Authentication{
 		return username;
 	}
 
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
 	@Override
 	public boolean isAuthenticated() {
 		// TODO Auto-generated method stub
@@ -66,4 +76,6 @@ public class JwtAuthentication implements Authentication{
 	public void setAuthenticated(boolean isAuthenticated) throws IllegalArgumentException {
 		this.isAuthenticated= isAuthenticated;
 	}
+	
+	
 }
