@@ -26,6 +26,20 @@ Maven has been used. Docker is the containerization platform of solution.
 ## Modules
 
 Services has been created as Maven modular project. PayDay-Demo is the parent project. Eureka, accounts-service, customers-service, transactions-service and notifications-service are the modules of the solution. Each module has its corresponding Dockerfile for docker image creation. docker-compose.yml is used to create services and run them in containers considering all the dependencies and network requirements.
+## Installation
+
+1. Maven 
+
+Projects can be built using Maven locally. Locate payday-demo folder. And run ```mvn clean package```
+
+2. Docker
+
+To start services as docker containers run ```docker-compose up --build```
+
+## Usage
+
+After running locally or docker environment locate browser to http:localhost:5555/swagger-ui.html for REST API documentation of the API Gateway. Application configurations including ports can be changed in each modules application.properties file.
+
 
 ## To do
 
@@ -39,14 +53,3 @@ Services has been created as Maven modular project. PayDay-Demo is the parent pr
 8. Hystrix Circuit Breaker integration
 9. Bootstrap sql scripts for dummy data.
 
-## Installation
-
-1. Maven 
-
-Projects can be built using Maven locally. Locate payday-demo folder. And run ```mvn clean package```
-
-2. Docker
-
-To start services as docker containers run ```docker-compose up --build```
-
-## Usage
