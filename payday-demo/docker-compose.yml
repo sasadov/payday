@@ -1,0 +1,65 @@
+version: '3.7'
+services:
+     eureka-server:
+        container_name: eureka-server
+        build:
+            context: .
+            dockerfile: eureka.Dockerfile
+        image: eureka-server:latest
+        expose:
+            - 1111
+        ports:
+            - 9999:1111         
+     accounts-server:
+        container_name: accounts-server
+        build:
+            context: .
+            dockerfile: accounts.Dockerfile
+        image: accounts-server:latest
+        environment:
+                    SPRING_APPLICATION_JSON: '{"eureka": {"client": {"serviceUrl": {"defaultZone": "http://eureka-server:1111/eureka/"}}}}'
+        expose:
+            - 2222
+        depends_on:
+            - eureka-server
+     customers-server:
+        container_name: customers-server
+        build:
+            context: .
+            dockerfile: customers.Dockerfile
+        image: customers-server:latest
+        environment:
+                    SPRING_APPLICATION_JSON: '{"eureka": {"client": {"serviceUrl": {"defaultZone": "http://eureka-server:1111/eureka/"}}}}'
+        expose:
+            - 3333
+        depends_on:
+            - eureka-server
+     transactions-server:
+        container_name: transactions-server
+        build:
+            context: .
+            dockerfile: transactions.Dockerfile
+        image: transactions-server:latest
+        environment:
+                    SPRING_APPLICATION_JSON: '{"eureka": {"client": {"serviceUrl": {"defaultZone": "http://eureka-server:1111/eureka/"}}}}'
+        expose:
+            - 4444
+        depends_on:
+            - eureka-server
+     apigateway-server:
+        container_name: apigateway-server
+        build:
+            context: .
+            dockerfile: apigateway.Dockerfile
+        image: apigateway-server:latest
+        environment:
+                    SPRING_APPLICATION_JSON: '{"eureka": {"client": {"serviceUrl": {"defaultZone": "http://eureka-server:1111/eureka/"}}}}'
+        expose:
+            - 5555
+        ports:
+            - 8888:5555 
+        depends_on:
+            - eureka-server
+            - transactions-server
+            - customers-server
+            - accounts-server
