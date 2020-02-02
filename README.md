@@ -4,8 +4,7 @@ PayDay Demo
 ## Description
 This solution is intended for demonstration purposes of microservices implementation using Spring Boot and Docker technologies.
 Solution covers sample use cases of conceptual digital banking backend system. Main functional requirements are customer registration,
-customer authentication, customer authorisation, account opening, getting account summary, getting transactions and getting email notifications]
-for account opening events. 
+customer authentication, customer authorisation, account opening, getting account summary, getting transactions and getting email notifications for account opening events. 
 
 ## Architecture
 Project architected using Microservices pattern -[https://microservices.io/patterns/index.html](https://microservices.io/patterns/index.html).
@@ -54,9 +53,15 @@ Basic flow:
 
 3. Call Account, Transaction and Notification services in any order providing JWT token from Sign In request:
 
+Account Opening:
+
 ![Account Opening](https://user-images.githubusercontent.com/10387661/73611401-facb7600-45fa-11ea-88a6-3d4c20469213.PNG)
 
+Account Summary:
+
 ![Account Summary](https://user-images.githubusercontent.com/10387661/73611402-facb7600-45fa-11ea-99e1-1f5a8548748d.PNG)
+
+Transaction History:
 
 ![Transaction History](https://user-images.githubusercontent.com/10387661/73611406-fc953980-45fa-11ea-886a-5a18366b1c92.PNG)
 
