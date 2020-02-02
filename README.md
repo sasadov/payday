@@ -13,13 +13,13 @@ API Gateway, Microservices, Service Discovery, Circuit Breaker and Load Balancer
 Entry point to the system is the API Gateway. API Gateway is responsible for authentication and authorisation of customers and forwarding 
 customer requests to related microservices. Microservices are registered Service Discovery automatically as service starts. 
 API Gateway consults Service Discovery Service to get ready microservice endpoints. Endpoints are served to gateway using Load Balancing
-strategies. Relational database is used for persistence.
+strategies. Relational database is used for persistence. JWT support added to Spring Security by implementing new servlet filter, Spring Security Authentication and Authentication Providers. Initial authentication is carried out by providing credentials via HTTP Basic Authorization header. Later authentication and authorisation are provided using JWT token in HTTP Bearer Authentication header.
 
 ![Architecture](https://user-images.githubusercontent.com/10387661/73612003-4aad3b80-4601-11ea-913b-ca046969e295.png)
 
 ## Technologies
 
-Solution is a Java application. Spring Boot, Spring Security, Spring Eureka Service Discovery, Hystrix, Ribbon, JPA, Hibernate and PostgreSql
+Solution is a Java application. Spring Boot, Spring Security, JWT, Spring Eureka Service Discovery, Hystrix, Ribbon, JPA, Hibernate and PostgreSql
 are the main frameworks, modules and applications which are the main building blocks of the system. As a build and package management tool
 Maven has been used. Docker is the containerization platform of solution.
 
@@ -38,7 +38,20 @@ To start services as docker containers run ```docker-compose up --build```
 
 ## Usage
 
-After running locally or docker environment locate browser to http:localhost:5555/swagger-ui.html for REST API documentation of the API Gateway. Application configurations including ports can be changed in each modules application.properties file.
+After running locally or in a docker environment locate browser to http//:localhost:5555/swagger-ui.html for REST API documentation of the API Gateway. Application configurations including ports can be changed in each modules application.properties file.
+
+![Swagger](https://user-images.githubusercontent.com/10387661/73612367-85fd3980-4604-11ea-8e62-f2c319cd7d67.PNG)
+
+Basic flow:
+
+1. Register in system by providing customer information: 
+
+![Sign Up](https://user-images.githubusercontent.com/10387661/73611404-fbfca300-45fa-11ea-8766-a8a1d8c092cc.PNG)
+
+2. Sign in system by providing customer id created in registration and password using Basic HTTP Authorisation header:
+
+![Sign In](https://user-images.githubusercontent.com/10387661/73611403-fb640c80-45fa-11ea-843c-6f7ad9ad1a07.PNG)
+
 
 
 ## To do
