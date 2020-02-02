@@ -33,7 +33,7 @@ Projects can be built using Maven locally. Locate payday-demo folder. And run ``
 
 2. Docker
 
-To start services as docker containers run ```docker-compose up --build```
+To start services as docker containers locate payday-demo folder and run ```docker-compose up --build```
 
 ## Usage
 
