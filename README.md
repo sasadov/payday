@@ -16,6 +16,8 @@ customer requests to related microservices. Microservices are registered Service
 API Gateway consults Service Discovery Service to get ready microservice endpoints. Endpoints are served to gateway using Load Balancing
 strategies. Relational Database is used for persistence.
 
+![Architecture](https://user-images.githubusercontent.com/10387661/73612003-4aad3b80-4601-11ea-913b-ca046969e295.png)
+
 2. ### Technologies
 
 3. ### Modules
