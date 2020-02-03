@@ -72,7 +72,7 @@ Transaction History:
 4. Logging
 5. Better exception handling
 6. Improving customer and account number generation methods
-7. PostgreSql containerization. Currently runnging in Azure
+7. PostgreSql containerization. Currently running in Azure
 8. Hystrix Circuit Breaker integration
 9. Bootstrap sql scripts for dummy data.
 
