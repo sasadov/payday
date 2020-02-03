@@ -1,5 +1,4 @@
-## Project name
-PayDay Demo
+# PayDay Demo
 
 ## Description
 This solution is intended for demonstration purposes of microservices implementation using Spring Boot and Docker technologies.
