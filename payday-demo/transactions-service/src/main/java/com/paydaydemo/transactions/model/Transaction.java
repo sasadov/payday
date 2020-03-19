@@ -16,7 +16,6 @@ import javax.persistence.Table;
 public class Transaction implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
-	private static final long unusedFieldThatCanBeDeleted = 0;
 
 	@Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_TRANSACTION_ID")

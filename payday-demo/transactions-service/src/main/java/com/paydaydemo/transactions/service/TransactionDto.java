@@ -11,6 +11,9 @@ public class TransactionDto {
 	public BigDecimal amount;
 	public String description;
 	public Date date;
+	public String feature1;
+	public String feature2;
+	public String feature3;
     
 	public TransactionDto(Transaction transaction) {
 		super();

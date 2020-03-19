@@ -158,7 +158,6 @@
   	<module>apigateway</module>
   	<module>accounts-service</module>
   	<module>transactions-service</module>
-  	<module>notifications-service</module>
   	<module>customers-service</module>
   	<module>eureka</module>
   </modules>
